@@ -7,13 +7,16 @@
       <th>Orbit Type</th>
       <th>Launch Date</th>
    </tr>
+
    <!-- TODO: put <tr *ngFor=""></tr> here -->
-   <tr *ngFor ="let satellite of satellites">
+   <tr *ngFor ="let satellite of satellites" [class.warning]="satellite.shouldShowWarning()">
+       
     <td>{{satellite.name}} </td>
-    <td>{{satellite.type}}</td>
+    <td >{{satellite.type}}</td>
     <td>{{satellite.operational}}</td>
    <td> {{satellite.orbit}}</td>
    <td>{{satellite.launchDate}}</td>
+
 </tr>
-   
+
 </table>
