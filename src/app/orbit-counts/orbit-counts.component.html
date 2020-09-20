@@ -1,6 +1,6 @@
-<p>orbit-counts works!</p>
+<!--Way no 1 B) Counting Satellites-->
 <h3>Satellite Counts:</h3>
-<div class="counts">
+<!-- <div class="counts">
     <div>Total: <span >{{satellites.length}}</span></div>
     <div>Space Debris: <span >{{satelliteCount('space debris')}}</span></div>
     <div>Communication: <span>{{satelliteCount('communication')}}</span></div>
@@ -8,4 +8,12 @@
     <div>Positioning: <span>{{satelliteCount('positioning')}}</span></div>
     <div>Space Station: <span>{{satelliteCount('space station')}}</span></div>
     <div>Telescope: <span>{{satelliteCount('telescope')}}</span></div>
- </div>
+ </div> -->
+
+<!-- way 2 from Counting Satellites-->
+
+ <div class="counts" >
+    
+    <div *ngFor = "let orbitType of orbitTypes" class="header-row">{{orbitType}}
+        <span >{{satelliteCount(orbitType)}}</span></div>
+</div>

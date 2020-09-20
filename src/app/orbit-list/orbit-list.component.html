@@ -9,15 +9,25 @@
    </tr>
 
    <!-- TODO: put <tr *ngFor=""></tr> here -->
+
+   <!--use an *ngFor to loop over an array of the different types, instead of explicitly writing a <tr> for each satellite type.-->
+      <!-- creating a array of table header tableHeader[] inside class of orbit-list.component.ts file-->
+
    <tr *ngFor ="let satellite of satellites" [class.warning]="satellite.shouldShowWarning()">
+          <td *ngFor = "let column of tableHeader">{{satellite[column]}} </td>
+
+
+   <!-- way no 1----explicit way of creating table using td over and over ... -->  
+
+  <!-- </tr>
        
     <td>{{satellite.name}} </td>
     <td >{{satellite.type}}</td>
     <td>{{satellite.operational}}</td>
    <td> {{satellite.orbit}}</td>
-   <td>{{satellite.launchDate}}</td>
+   <td>{{satellite.launchDate}}</td>-->
 
-</tr>
+</tr> 
 
 </table>
 

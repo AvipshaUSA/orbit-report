@@ -8,6 +8,8 @@ import {Satellite} from  '../satellite';
 })
 export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
+
+  tableHeader: string[] = ['name', 'type', 'operational', 'orbit Type','Launch Date']
   
   constructor() { }
 
