@@ -13,7 +13,7 @@
 <!-- way 2 from Counting Satellites-->
 
  <div class="counts" >
-    
-    <div *ngFor = "let orbitType of orbitTypes" class="header-row">{{orbitType}}
+    <div>Total: <span >{{satellites.length}}</span></div>
+    <div *ngFor = "let orbitType of orbitTypes"  class="header-row">{{orbitType}}
         <span >{{satelliteCount(orbitType)}}</span></div>
 </div>
